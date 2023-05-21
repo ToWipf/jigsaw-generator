@@ -21,7 +21,12 @@ edge_types = expand_edge_types(edge_types, opposite, flip)
 # Set grid Size
 H, W = 4, 4
 
+count = 0
+
 while True:
+    count=count+1
+    if(count%100 == 0):
+        print("try nr.{}".format(count))
 
     horizontal_edges, vertical_edges = sample_random_grid(H, W, edge_types, border=0)
     #horizontal_edges, vertical_edges = get_grid(H, W, edge_types, border=0)
