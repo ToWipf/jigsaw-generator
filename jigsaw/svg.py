@@ -1,7 +1,6 @@
 
 import numpy as np
 
-
 class Style:
 
     def trace_flat(self, data, origin, forward, right):
@@ -281,3 +280,11 @@ def display_grid(horizontal_edges, vertical_edges, *, style=None, scale=64.0, ma
 
 
 # TODO display_pieces
+
+def grid_saveToDisk(horizontal_edges, vertical_edges, *, style=None, scale=64.0, margin=0.25):
+    svg = grid_to_svg(horizontal_edges, vertical_edges, style=style, scale=scale, margin=margin)
+
+    filename = str("{}{}".format(horizontal_edges, vertical_edges).replace('[','').replace(']','').replace(' ','').replace('\n', ''))
+    file = open('output/{}.svg'.format(filename), 'w')
+    file.write(f'{svg}')
+    file.close()
