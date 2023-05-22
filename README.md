@@ -22,6 +22,8 @@ Hence, the approach here is to brute force all combinations, effectively countin
 
 ## Getting started
 
+Initial setup: `pip install numba numpy`
+
 First of all, this project is meant as an experiment, and is therefore not expected to be flexible, nor robust.
 Still, feel free to play with the provided helpers!
 

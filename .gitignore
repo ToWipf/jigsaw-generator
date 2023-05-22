@@ -8,3 +8,4 @@
 *.pyd
 *.svg
 *.txt
+/output

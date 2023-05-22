@@ -11,7 +11,21 @@ if not os.path.exists("output"):
 
 # Choose only centered edge types, two sizes
 edge_types = np.array([
+#    CENTERED_BIG_MALE,
+    CENTERED_MEDIUM_MALE,
     CENTERED_SMALL_MALE,
+#    RIGHT_BIG_MALE,
+    RIGHT_MEDIUM_MALE,
+    RIGHT_SMALL_MALE,
+#    LEFT_BIG_MALE,
+    LEFT_MEDIUM_MALE,
+    LEFT_SMALL_MALE,
+#    DOUBLE_BIG_MALE,
+#    DOUBLE_MEDIUM_MALE,
+    DOUBLE_SMALL_MALE,
+#    TWISTED_BIG_MALE,
+#    TWISTED_MEDIUM_MALE,
+    TWISTED_SMALL_MALE,
     FLAT
 ])
 
@@ -25,8 +39,7 @@ count = 0
 
 while True:
     count=count+1
-    if(count%100 == 0):
-        print("try nr.{}".format(count))
+    print("try nr.{}".format(count))
 
     horizontal_edges, vertical_edges = sample_random_grid(H, W, edge_types, border=0)
     #horizontal_edges, vertical_edges = get_grid(H, W, edge_types, border=0)
