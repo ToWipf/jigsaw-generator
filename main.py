@@ -33,7 +33,7 @@ edge_types = np.array([
 edge_types = expand_edge_types(edge_types, opposite, flip)
 
 # Set grid Size
-H, W = 4, 4
+H, W = 3, 3
 
 count = 0
 
